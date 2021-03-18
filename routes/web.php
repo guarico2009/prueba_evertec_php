@@ -21,9 +21,8 @@ Route::get('/orden', function () {
     return view('client.order');
 });
 
-Route::post('/resumen', function () {
-    return view('client.summary');
-});
+Route::post('/orden','OrderController@comprar');
+Route::post('/orden/pago','OrderController@pago');
 
 Route::get('/admin/ordenes', function () {
     return view('admin.orders');

@@ -11,24 +11,25 @@
   <div class="card-header">
     <h3 class="card-title">Resúmen</h3>
   </div>
-  <form method="post" action="/resumen" role="form">
+  <form method="post" action="/orden/pago" role="form">
     <input name="_token" type="hidden" value="<?php echo e(csrf_token()); ?>"/>
+    <input type="hidden" class="form-control" name="id" value="<?php echo e($id); ?>">
     <div class="card-body">
       <div class="row">
         <div class="col-12 col-sm-12">
           <div class="row invoice-info">
             <div class="col-sm-4 invoice-col">
               <address>
-                <strong>David Barrera</strong><br>
-                Dirección: Tulcán 1906 y Ayacucho<br>
-                Teléfono: (804) 123-5432<br>
-                Email: info@almasaeedstudio.com
+                <strong><?php echo e($customer_name); ?></strong><br>
+                Teléfono: <?php echo e($customer_mobile); ?><br>
+                Email: <?php echo e($customer_email); ?>
+
               </address>
             </div>
             <div class="col-sm-4 invoice-col">
               <br>
-              <b>Orden#:</b> 4F3S8J<br>
-              <b>Fecha de pago:</b> 2/22/2014<br>
+              <b>Orden#: </b> <?php echo e($order_id); ?><br>
+              <b>Fecha de pago: </b><?php echo e(date('d/m/Y H:i:s')); ?> <br>
             </div>
           </div>
         </div>
@@ -69,7 +70,7 @@
               <tbody>
                 <tr>
                   <th>Total:</th>
-                  <td>$265.24</td>
+                  <td>$<?php echo e($total_order); ?></td>
                 </tr>
               </tbody>
             </table>

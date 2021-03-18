@@ -11,22 +11,31 @@
   <div class="card-header">
     <h3 class="card-title">Nueva orden</h3>
   </div>
-  <form method="post" action="/resumen" role="form">
+  <form method="post" action="/orden" role="form">
     <input name="_token" type="hidden" value="{{ csrf_token() }}"/>
     <div class="card-body">
+      @if ($errors->any())
+      <div class="alert alert-danger">
+        <ul>
+          @foreach ($errors->all() as $error)
+          <li>{{ $error }}</li>
+          @endforeach
+        </ul>
+      </div>
+      @endif
       <div class="row">
         <div class="col-12 col-sm-6 pr-5">
           <div class="form-group">
             <label for="nombre">Nombre</label>
-            <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre completo">
+            <input type="text" class="form-control" name="nombre" placeholder="Ingrese su nombre completo">
           </div>
           <div class="form-group">
             <label for="email">Dirección de correo electrónico</label>
-            <input type="text" class="form-control" id="email" placeholder="Ingrese su dirección de email">
+            <input type="text" class="form-control" name="email" placeholder="Ingrese su dirección de email">
           </div>
           <div class="form-group">
             <label for="telefono">Teléfono</label>
-            <input type="text" class="form-control" id="telefono" placeholder="Ingrese su teléfono">
+            <input type="text" class="form-control" name="telefono" placeholder="Ingrese su teléfono">
           </div>
         </div>
         <div class="col-12 col-sm-6">
@@ -62,6 +71,7 @@
             <div class="col-12 col-sm-12">
               <div class="bg-gray py-2 px-3 mt-4">
                 <h2 class="mb-0">
+                  <input type="hidden" class="form-control" name="total" value="80">
                   $80.00
                 </h2>
               </div>

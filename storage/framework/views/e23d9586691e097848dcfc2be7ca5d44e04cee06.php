@@ -140,7 +140,6 @@
       </div>
     </div>
   </div>
-  <!-- /.card-body -->
 </div>
 <?php $__env->stopSection(); ?>
 

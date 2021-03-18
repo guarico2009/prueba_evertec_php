@@ -140,6 +140,5 @@
       </div>
     </div>
   </div>
-  <!-- /.card-body -->
 </div>
 @stop

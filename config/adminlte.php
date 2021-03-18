@@ -236,16 +236,10 @@ return [
             'icon'        => 'fas fa-fw fa-store',
             'label_color' => 'success',
         ],
-        [
-            'text'        => 'Ordenes',
-            'url'         => '/ordenes',
-            'icon'        => 'fas fa-fw fa-file-invoice-dollar',
-            'label_color' => 'success',
-        ],
         ['header' => 'ADMINISTRADOR'],
         [
             'text'        => 'Ordenes',
-            'url'         => '/adminOrdenes',
+            'url'         => '/admin/ordenes',
             'icon'        => 'fas fa-fw fa-file-invoice-dollar',
             'label_color' => 'success',
         ]

@@ -24,3 +24,7 @@ Route::get('/orden', function () {
 Route::post('/resumen', function () {
     return view('client.summary');
 });
+
+Route::get('/admin/ordenes', function () {
+    return view('admin.orders');
+});

@@ -71,7 +71,7 @@
             <div class="col-12 col-sm-12">
               <div class="bg-gray py-2 px-3 mt-4">
                 <h2 class="mb-0">
-                  <input type="hidden" class="form-control" name="total" value="80">
+                  <input type="hidden" class="form-control" name="total" value="80.00">
                   $80.00
                 </h2>
               </div>

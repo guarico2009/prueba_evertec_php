@@ -14,16 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('client.shop');
+  return view('client.shop');
 });
 
 Route::get('/orden', function () {
-    return view('client.order');
+  return view('client.order');
 });
 
 Route::post('/orden','OrderController@comprar');
 Route::post('/orden/pago','OrderController@pago');
+Route::get('/orden/pago/response/{id}','OrderController@estadoPago');
 
-Route::get('/admin/ordenes', function () {
-    return view('admin.orders');
-});
+Route::post('/orden/pago/repetir/{id}','OrderController@repetirPago');
+Route::post('/orden/pago/consultarEstado','OrderController@consultarEstado');
+
+Route::get('/admin/ordenes', 'OrderController@consultarOrdenes');

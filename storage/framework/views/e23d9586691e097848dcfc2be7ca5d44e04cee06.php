@@ -97,7 +97,7 @@
         </div>
 
         <div class="mt-4">
-          <a href="/orden" class="btn btn-primary btn-lg btn-flat" role="button">
+          <a href="/orden" name="btnComprar" class="btn btn-primary btn-lg btn-flat" role="button">
             <i class="fas fa-cart-plus fa-lg mr-2"></i>
             Comprar
           </a>

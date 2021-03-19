@@ -4478,6 +4478,7 @@ return array(
     'Symfony\\Polyfill\\Php80\\Php80' => $vendorDir . '/symfony/polyfill-php80/Php80.php',
     'Tests\\CreatesApplication' => $baseDir . '/tests/CreatesApplication.php',
     'Tests\\Feature\\ExampleTest' => $baseDir . '/tests/Feature/ExampleTest.php',
+    'Tests\\Feature\\ProcesoCompraTest' => $baseDir . '/tests/Feature/ProcesoCompraTest.php',
     'Tests\\TestCase' => $baseDir . '/tests/TestCase.php',
     'Tests\\Unit\\ExampleTest' => $baseDir . '/tests/Unit/ExampleTest.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/src/Template.php',
